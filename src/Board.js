@@ -24,6 +24,10 @@ export class TicTacToeBoard extends React.Component {
       textAlign: "center",
     };
 
+    const boardStyle = {
+      margin: "auto",
+    };
+
     let tbody = [];
     for (let i = 0; i < 3; i++) {
       let cells = [];
@@ -40,7 +44,7 @@ export class TicTacToeBoard extends React.Component {
 
     return (
       <div>
-        <table id="board">
+        <table id="board" style={boardStyle}>
           <tbody>{tbody}</tbody>
         </table>
         {winner}
